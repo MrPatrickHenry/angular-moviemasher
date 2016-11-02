@@ -1,0 +1,30 @@
+version: '2'
+services:
+  angular_moviemasher:
+    build: .
+    ports:
+      - "8080:80"
+  api:
+    build: api/.
+    ports: 
+      - "8081:80"
+    volumes:
+      - /root/app/Ginger/source/app:/var/www/html
+
+  moviemasher_rb:
+    image: moviemasher/moviemasher.rb:latest
+    volumes_from:
+      - angular_moviemasher
+    command: process_loop
+    tty: true
+
+  elk:
+    container_name: elk
+    image: sebp/elk
+    ports:
+      - "5601:5601"
+      - "9200:9200"
+      - "5044:5044"
+      - "5000:5000"
+    links:
+      -  angular_moviemasher
