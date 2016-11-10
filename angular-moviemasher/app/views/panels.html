@@ -118,59 +118,7 @@
     <!--end acord -->
 
 
-    <h2 onclick="toggle_visibilityInspector()">Inspector</h2><br>
-
-    <div id="InspectorPanel" class="hidden">
-
-      <!--make new project -->
-
-      <div class="dropdown">
-<h4>Choose Project</h4>
-        <ul role="menu" aria-labelledby="dropdownMenu1">
-          <select ng-if="amm_resources.mash.search"
-          class='form-control-sm'
-          ng-model="$amm.mash_id"
-          ng-change="$amm.mash_id_change()"
-          ng-options="s.id as s.label for s in $amm.mashes"
-          ><option value=''>New Project...</option></select>
-        </ul>
-      </div>
-      <!--end new project -->
-
-
-<div id="Meta">
-<h3> Meta Data</h3>
-
-  <tags-input ng-model="tags">
-    </tags-input>
-
-<input type="text" name="tags" placeholder="tags">
-<br>
-<textarea class="form-control" rows="5" placeholder="description"></textarea>
-
-   <input type="submit" value="update"></div>
-
-<hr>
-
-
-      <div class='amm-inspector-panel'>
-
-        <span ng-switch="$amm.player.selectedClips.length">
-          <span ng-switch-when="0">Editing Project: {{$amm.player.mash.label}}</span>
-          <span ng-switch-when="1">Editing Clip: {{$amm.player.media($amm.player.selectedClip).label}}</span>
-          <span ng-switch-default>Multiple Clips Selected</span>
-        </span>
-      </div>
-      <div class='amm-inspector'>
-        <div class='amm-inspector-form' ng-include="amm_inspector_include($amm.player.selectedClipOrMash)"></div>
-
-
-      </div>
-    </div>
-
-    <!-- End of Acord -->
-
-
+   
 
 
     <h2 onclick="toggle_visibilityImport()" >Content Import</h2><br>
@@ -225,6 +173,58 @@
 
     <!--End Acord-->
 
+
+ <h2 onclick="toggle_visibilityInspector()">Inspector</h2><br>
+
+    <div id="InspectorPanel" class="hidden">
+
+      <!--make new project -->
+
+      <div class="dropdown">
+<h4>Choose Project</h4>
+        <ul role="menu" aria-labelledby="dropdownMenu1">
+          <select ng-if="amm_resources.mash.search"
+          class='form-control-sm'
+          ng-model="$amm.mash_id"
+          ng-change="$amm.mash_id_change()"
+          ng-options="s.id as s.label for s in $amm.mashes"
+          ><option value=''>New Project...</option></select>
+        </ul>
+      </div>
+      <!--end new project -->
+
+
+<div id="Meta">
+<h3> Meta Data</h3>
+
+  <tags-input ng-model="tags">
+    </tags-input>
+
+<input type="text" name="tags" placeholder="tags">
+<br>
+<textarea class="form-control" rows="5" placeholder="description"></textarea>
+
+   <input type="submit" class="btn btn-primary btn-sm" value="update"></div>
+
+<hr>
+
+
+      <div class='amm-inspector-panel'>
+
+        <span ng-switch="$amm.player.selectedClips.length">
+          <span ng-switch-when="0">Editing Project: {{$amm.player.mash.label}}</span>
+          <span ng-switch-when="1">Editing Clip: {{$amm.player.media($amm.player.selectedClip).label}}</span>
+          <span ng-switch-default>Multiple Clips Selected</span>
+        </span>
+      </div>
+      <div class='amm-inspector'>
+        <div class='amm-inspector-form' ng-include="amm_inspector_include($amm.player.selectedClipOrMash)"></div>
+
+
+      </div>
+    </div>
+
+    <!-- End of Acord -->
 
 
 

@@ -41,7 +41,7 @@ background-color:#6e6e6e;
   height: 90%; /* preview.height + head.height + foot.height */
 }
 .amm-browser-panel{
-  height: 70%;
+  height: 50%;
     left: 5%;
     position: absolute;
     width: 90%;
@@ -165,7 +165,7 @@ background-color:#6e6e6e;
   bottom:0px;
   height:25%;
   overflow-y: auto;
-  width:100%;
+  width:70%;
 }
 amm-timeline-track-controls {
   position:absolute;
@@ -650,6 +650,11 @@ height:50px;
 float:left;
 }
 
+#InspectorPanel{
+border-radius: :12px;
+border thin,solid,000;
+
+}
 
 .player-controls{
 float:left;
