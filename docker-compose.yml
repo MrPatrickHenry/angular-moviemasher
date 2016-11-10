@@ -9,7 +9,7 @@ services:
     ports: 
       - "8081:80"
     volumes:
-      - /root/app/Ginger/source/app:/var/www/html
+      - ~/angular-moviemasher/api/CharlieChaplin:/var/www/html
 
   moviemasher_rb:
     image: moviemasher/moviemasher.rb:latest
