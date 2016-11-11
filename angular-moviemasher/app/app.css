@@ -9,6 +9,12 @@
 body{
 background-color:#262424;
 }
+.undo
+{-webkit-transform:rotateY(180deg);
+  -moz-transform:rotateY(180deg);
+  -o-transform:rotateY(180deg);
+  -ms-transform:rotateY(180deg);}
+
 .amm-ui{
   position: absolute;
   top: 20px;
@@ -374,7 +380,7 @@ background-color: #333333;
     bottom: 0;
     position: absolute;
       background-color: #333333;
-    height: 50px;
+    height: 34px;
 
 }
 
@@ -455,12 +461,15 @@ background-color: #333333;
     white-space: nowrap;
 }
 .amm-error {
-  color: red;
-  width:200px;
-  height: 20px;
-  margin-left: 10px;
-  display: inline-block;
-  cursor: pointer;
+   color: #ff0000;
+    cursor: pointer;
+    display: inline-block;
+    height: 47px;
+    margin-left: 10px;
+    position: absolute;
+    width: 100%;
+    z-index: 1100000;
+    border-radius:4px;
 }
 .amm-progress {
   display:inline-block;
@@ -685,3 +694,4 @@ float:left;
 width:200px;
 position: relative;
 }
+
