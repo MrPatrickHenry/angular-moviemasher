@@ -20,7 +20,7 @@ RUN export PATH="$PATH:~/.composer/vendor/bin"
 RUN source ~/.bashrc
 COPY httpd.conf /etc/httpd/conf/
 
-WORKDIR /var/www/html/CharlieChaplin
+WORKDIR /var/www/html
 
 CMD chmod -R guo+w storage
 CMD chmod -R gu+w storage

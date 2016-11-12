@@ -11,8 +11,6 @@ services:
     image: mariadb
     ports:
       - "3306:3306"
-    volumes:
-     - ./database:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: my-secret-pw
       MYSQL_DATABASE: Vlogon
