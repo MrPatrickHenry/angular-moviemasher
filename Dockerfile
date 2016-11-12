@@ -25,4 +25,4 @@ COPY config/docker/moviemasher.ini /var/www/config/moviemasher.ini
 COPY config/index.html /var/www/html/
 
 # install entire project at root
-COPY angular-moviemasher /var/www/html/angular-moviemasher/
+COPY ./angular-moviemasher /var/www/html/

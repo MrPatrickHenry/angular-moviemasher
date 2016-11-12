@@ -4,6 +4,9 @@ services:
     build: .
     ports:
       - "8080:80"
+    volumes:
+      - ~/angular-moviemasher/angular-moviemasher:/var/www/html
+      
   api:
     build: api/.
     ports: 
