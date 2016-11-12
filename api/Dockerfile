@@ -18,8 +18,9 @@ RUN composer global require "laravel/installer"
 
 RUN export PATH="$PATH:~/.composer/vendor/bin"
 RUN source ~/.bashrc
+COPY httpd.conf /etc/httpd/conf/
 
-WORKDIR /var/www/html
+WORKDIR /var/www/html/CharlieChaplin
 
 CMD chmod -R guo+w storage
 CMD chmod -R gu+w storage
